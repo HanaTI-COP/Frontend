@@ -27,29 +27,29 @@
 
 <script>
 export default {
-  name: "LoginView",
+  name: 'LoginView',
   data() {
     return {
-      email: "",
-      password: "",
-    };
+      email: '',
+      password: '',
+    }
   },
   methods: {
     login() {
       this.axios
-        .post("/api/user/signin", {
+        .post('/api/user/signin', {
           email: this.email,
           password: this.password,
         })
         .then(() => {
-          alert("SUCCESS");
+          alert('SUCCESS')
         })
         .catch((err) => {
-          console.log(err);
-        });
+          console.log(err)
+        })
     },
   },
-};
+}
 </script>
 
 <style>
