@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <v-app>
     <router-link to="/signin">Sign In</router-link> |
     <router-link to="/signup">Sign Up</router-link>
-  </nav>
+  </v-app>
   <router-view />
 </template>
 
