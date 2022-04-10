@@ -11,15 +11,15 @@
       <div>
         <div class="flex login_input_group">
           <p class="login_input_label">이메일</p>
-          <input class="login_input" type="text" />
+          <input v-model="email" class="login_input" type="text" />
         </div>
         <div class="flex login_input_group">
           <p class="login_input_label">비밀번호</p>
-          <input class="login_input" type="password" />
+          <input v-model="password" class="login_input" type="password" />
         </div>
       </div>
       <div class="login_btn_div">
-        <button class="login_btn">LOGIN</button>
+        <button class="login_btn" @click="login">LOGIN</button>
       </div>
     </div>
   </div>
@@ -28,6 +28,27 @@
 <script>
 export default {
   name: "LoginView",
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.axios
+        .post("/api/user/signin", {
+          email: this.email,
+          password: this.password,
+        })
+        .then(() => {
+          alert("SUCCESS");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
 };
 </script>
 
