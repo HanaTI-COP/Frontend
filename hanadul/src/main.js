@@ -1,11 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import axios from "axios";
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
-axios.defaults.baseURL = "http://localhost:8080";
+loadFonts()
 
-const app = createApp(App);
-app.config.globalProperties.axios = axios;
-app.use(store).use(router).mount("#app");
+createApp(App).use(router).use(store).use(vuetify).mount('#app')
