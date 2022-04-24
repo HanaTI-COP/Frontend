@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/user/LoginView.vue'
 import SignupView from '../views/user/SignupView'
 import MyPage from '../views/profile/MyPage.vue'
+import CreatePJT from '../views/NewProject/NewInput.vue'
+import Matching from '../views/NewProject/Matching.vue'
 
 const routes = [
   {
@@ -18,6 +20,16 @@ const routes = [
     path: '/mypage',
     name: 'MyPage',
     component: MyPage,
+  },
+  {
+    path: '/createpjt',
+    name: 'CreatePJT',
+    component: CreatePJT,
+  },
+  {
+    path: '/matching',
+    name: 'Matching',
+    component: Matching,
   },
 ]
 
