@@ -41,7 +41,7 @@
                   >#증권</v-chip
                 >
                 <v-chip class="ma-2" style="background-color: #d0d0d0"
-                  >#MySQL</v-chip
+                  >#Oracle</v-chip
                 >
               </v-chip-group>
             </v-row>
