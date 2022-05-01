@@ -4,6 +4,7 @@ import SignupView from '../views/user/SignupView'
 import MyPage from '../views/profile/MyPage.vue'
 import CreatePJT from '../views/NewProject/NewInput.vue'
 import Matching from '../views/NewProject/Matching.vue'
+import AppliMyPage from '../views/profile/AppliMyPage.vue'
 
 const routes = [
   {
@@ -30,6 +31,12 @@ const routes = [
     path: '/matching',
     name: 'Matching',
     component: Matching,
+  },
+  { 
+    path : '/applipage',
+    name : 'AppliMyPage',
+    component : AppliMyPage,
+    
   },
 ]
 
