@@ -1,7 +1,12 @@
 <template>
   <v-app>
-    <router-link to="/signin">Sign In</router-link> |
-    <router-link to="/signup">Sign Up</router-link>
+    <v-tabs>
+      <v-tab><router-link to="/signin">Sign In</router-link></v-tab>
+      <v-tab><router-link to="/signup">Sign Up</router-link></v-tab>
+      <v-tab><router-link to="/mypage">My Page</router-link></v-tab>
+      <v-tab><router-link to="/createpjt">Create Project</router-link></v-tab>
+      <v-tab><router-link to="/matching">Matching</router-link></v-tab>
+    </v-tabs>
   </v-app>
   <router-view />
 </template>
